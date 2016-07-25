@@ -1,0 +1,123 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+//以下为版本配置
+    defaultConfig {
+        applicationId "com.gooddream.learningdriving"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0.0"
+        // dex突破65535的限制
+        multiDexEnabled true
+    }
+//    task makeJar(type: Copy) {
+//        delete 'build/libs/mysdk.jar'
+//        from('build/intermediates/bundles/release/')
+//        into('build/libs/')
+//        include('classes.jar')
+//        rename ('classes.jar', 'mysdk.jar')
+//    }
+//    makeJar.dependsOn(build)
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+    }
+    //以下为签名打包
+    signingConfigs {
+        // your debug keystore
+//        debug {
+//            storeFile file("haomeng.jks")
+//            storePassword "haomeng999"
+//            keyAlias "haomengxueche"
+//            keyPassword "haomeng998"
+//        }
+        release {
+            storeFile file("haomeng.jks")
+            storePassword "haomeng999"
+            keyAlias "haomengxueche"
+            keyPassword "haomeng998"
+        }
+//        release {
+//            storeFile file(System.console().readLine("\n 请输入   .jks文件名： "))
+//            storePassword new String(System.console().readPassword("\n 请输入   storePassword： "))
+//            keyAlias System.console().readLine("\n\$ 请输入   keyAlias： ")
+//            keyPassword new String(System.console().readPassword("\n 请输入   keyPassword： "))
+//        }
+    }
+    //打包apk配置
+    buildTypes {
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+//        debug {
+//            // 不显示Log
+//            buildConfigField "boolean", "LOG_DEBUG", "false"
+//            //混淆
+//            minifyEnabled true
+//            //Zipalign优化
+//            zipAlignEnabled true
+//            // 移除无用的resource文件
+//            shrinkResources true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.debug
+//        }
+    }
+//    task nativeLibsToJar(type: Zip, description: "create a jar archive of the native libs") {
+//        destinationDir file("$projectDir/libs")
+//        baseName "Native_Libs2"
+//        extension "jar"
+//        from fileTree(dir: "libs", include: "**/*.so")
+//        into "lib"
+//    }
+//
+//    tasks.withType(JavaCompile) {
+//        compileTask -> compileTask.dependsOn(nativeLibsToJar)
+//    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:design:24.0.0'
+    compile files('libs/Volley_noSource.jar')
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.jakewharton:butterknife:8.1.0'
+    compile files('libs/AMap_Location_V2.6.0_20160628.jar')
+    compile files('libs/AMap_3DMap_V3.3.2_20160525.jar')
+    compile files('libs/ClipPicView_noSource.jar')
+}

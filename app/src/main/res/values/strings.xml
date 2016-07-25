@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">好梦学车</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="exist">再按一次退出</string>
+
+
+    <string name="hint_login">手机号码</string>
+    <string name="hint_password">输入密码</string>
+
+    <string name="choose_coach">选择教练</string>
+    <string name="learningDriving_question_bank">学车</string>
+    <string name="events_enquiries">活动资讯</string>
+    <string name="personal_center">个人中心</string>
+
+    <string name="pop1">地区</string>
+    <string name="pop2">评价</string>
+    <string name="pop3">班型</string>
+    <string name="pop3_2">自动挡</string>
+
+
+    <string name="question_1">科一</string>
+    <string name="question_2">科二</string>
+    <string name="question_3">科三</string>
+    <string name="question_4">科四</string>
+    <string name="question_5">拿证</string>
+
+    <string name="learning_1_1">顺序练题</string>
+    <string name="learning_1_2">模拟考试</string>
+    <string name="learning_1_3">强化练习</string>
+    <string name="learning_1_4">随机练习</string>
+    <string name="learning_1_5">必过秘籍</string>
+    <string name="learning_1_7">理论站点</string>
+    <string name="learning_1_8">约考流程</string>
+    <string name="learning_1_9">预约考试</string>
+
+    <string name="learning_2_1">定点停车和起步</string>
+    <string name="learning_2_2">直角转弯</string>
+    <string name="learning_2_3">曲线行驶</string>
+    <string name="learning_2_4">侧方位停车</string>
+    <string name="learning_2_5">倒车入库</string>
+
+    <string name="sign">签到打卡</string>
+    <string name="sign_go">别等啦 马上报名</string>
+    <string name="protocol">注册即表示同意《好梦学车用户协议》</string>
+
+    <string name="my_coach">我的教练</string>
+    <string name="my_coupon">我的优惠券</string>
+    <string name="online_consult">在线咨询</string>
+    <string name="learning_progress">学车进度</string>\
+
+    <string name="learning_progress_1">入籍</string>
+    <string name="learning_progress_2">科一</string>
+    <string name="learning_progress_3">科二</string>
+    <string name="learning_progress_4">科三</string>
+    <string name="learning_progress_5">科四</string>
+
+    <string name="ensurn_enter">确认入籍</string>
+
+    <string name="bao">包</string>
+    <string name="pei">赔</string>
+
+    <string name="apply_learnig">报名学车</string>
+    <string name="apply_right">马上报名</string>
+    <string name="phone_enquiries">电话咨询</string>
+    <string name="online_service">在线客服</string>
+
+    <string name="complain">一键投诉</string>
+
+    <string name="year">教龄</string>
+    <string name="passing_rate">通过率</string>
+    <string name="online_count">在线学员</string>
+    <string name="total_count">累计学员</string>
+    <string name="learning_type">所授班型</string>
+    <string name="evaluate_label">评价标签</string>
+    <string name="navigation">导航</string>
+
+    <string name="C1">C1</string>
+    <string name="C2">C2</string>
+
+    <string name="popContent_apply">&#160;&#160;&#160;&#160;确定报名后，呼叫上门报名车进行报名？</string>
+    <string name="popContent_apply_naturalization">&#160;&#160;&#160;&#160;确定入籍后，系统将自动支付入籍管理费用1000元，是否确认入籍？</string>
+    <string name="popContent_apply_1">&#160;&#160;&#160;&#160;确定科目一通过后系统将进行科目二教练匹配，是否确认通过？</string>
+    <string name="popContent_apply_2">&#160;&#160;&#160;&#160;确定科目二通过后系统将自动支付学费900元，并对教练打赏评分，是否确认通过？</string>
+    <string name="popContent_apply_3">&#160;&#160;&#160;&#160;确定入籍后，系统将自动支付入籍管理费用1000元，是否确认入籍？</string>
+    <string name="popContent_apply_4">&#160;&#160;&#160;&#160;确定入籍后，系统将自动支付入籍管理费用1000元，是否确认入籍？</string>
+
+    <string name="reword_money">打赏金额:</string>
+    <string name="_0yuan">0元</string>
+    <string name="_10yuan">10元</string>
+    <string name="_20yuan">20元</string>
+    <string name="_50yuan">50元</string>
+    <string name="_100yuan">100元</string>
+
+    <string name="impression_label">印象标签:</string>
+    <string name="evaluate_star">评价打分:</string>
+    <string name="evaluate_content">评价内容:</string>
+    <string name="hint_evaluate">再说点什么吧#^_^#</string>
+    <string name="anonymity">匿名评价</string>
+    <string name="commit_comment">提交评论</string>
+
+    <string name="complaint_label">投诉原因:</string>
+    <string name="hint_complaint">在此具体描述投诉内容</string>
+    <string name="complaint_content">投诉内容:</string>
+    <string name="anonymity_complaint">匿名投诉</string>
+    <string name="commit_complaint">提交投诉</string>
+
+    <string name="apply_msg">报名信息</string>
+    <string name="call_vehicle">呼叫报名车</string>
+    <string name="apply_success">报名成功</string>
+
+    <string name="rewriteType">修改班型</string>
+    <string name="call_vehicle_content">奔驰车上门报名，\n呼叫10秒响应，10小时内必达</string>
+    <string name="call_vehicle_apply_success">恭喜您！\n报名成功，祝您学车愉快</string>
+
+    <string name="apply_rewrite">提交修改</string>
+    <string name="more_comments">查看更多评论</string>
+</resources>

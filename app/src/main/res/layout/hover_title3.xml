@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/relative_total_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_main_title"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="onClick">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="fill_vertical"
+            android:text="@string/events_enquiries"
+            android:textColor="@color/white"
+            android:textSize="@dimen/gooddream_18dp" />
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="fill_vertical"
+            android:onClick="onClick"
+            android:padding="10dp"
+            android:text="下班"
+            android:textColor="@color/white"
+            android:textSize="@dimen/gooddream_14dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</LinearLayout>

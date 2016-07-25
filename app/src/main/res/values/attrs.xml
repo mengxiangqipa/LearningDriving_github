@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomRoundImageView_new">
+        <attr name="borderRadius_new" format="dimension" />
+        <attr name="type_new">
+            <enum name="circle" value="0" />
+            <enum name="round" value="1" />
+        </attr>
+        <attr name="mBorderThicknessInside" format="dimension" />
+        <attr name="mBorderInsideColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="LoadingView">
+
+        <attr name="loadingText" format="string"/>
+        <attr name="loadingTextAppearance" format="reference"/>
+    </declare-styleable>
+</resources>

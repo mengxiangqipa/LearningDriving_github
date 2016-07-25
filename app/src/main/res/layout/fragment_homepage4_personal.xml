@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relative_total_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_main_title"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="onClick">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="fill_vertical"
+            android:text="@string/personal_center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/gooddream_18dp" />
+
+    </RelativeLayout>
+
+    <com.my.customviews.OverScrollView
+        android:id="@+id/overScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gooddream_white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/gooddream_blue"
+                android:orientation="horizontal">
+
+                <com.my.customviews.CustomRoundImageView_new
+                    android:id="@+id/iv_icon"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/bg_default_icon" />
+
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_nick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/gooddream_16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/gooddream_14dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_day1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已报名0天"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/gooddream_10dp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="13dp"
+                            android:layout_gravity="center"
+                            android:background="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_day2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已练车0天"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/gooddream_10dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_setting"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="right"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="22dp"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/icon_setting" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:padding="1.5dp"
+                            android:src="@drawable/icon_sign" />
+
+                        <TextView
+                            android:id="@+id/tv_sign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sign"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/gooddream_12dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_sign_go"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/selector_sign"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/sign_go"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/gooddream_12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linaear_my_coach"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_bg_linear"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/icon_my_coach" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/my_coach"
+                    android:textColor="@color/gooddream_gray_light"
+                    android:textSize="@dimen/gooddream_14dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gooddream_gray_light" />
+
+            <LinearLayout
+                android:id="@+id/linaear_my_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_bg_linear"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/icon_my_coupon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/my_coupon"
+                    android:textColor="@color/gooddream_gray_light"
+                    android:textSize="@dimen/gooddream_14dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gooddream_gray_light" />
+
+            <LinearLayout
+                android:id="@+id/linaear_online_consult"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_bg_linear"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/icon_online_consult" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/online_consult"
+                    android:textColor="@color/gooddream_gray_light"
+                    android:textSize="@dimen/gooddream_14dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/gooddream_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:text="@string/learning_progress"
+                android:textColor="@color/gooddream_gray_light"
+                android:textSize="@dimen/gooddream_14dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gooddream_gray_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/icon_rmb" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_total_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="0.0"
+                        android:textColor="@color/gooddream_gray_dark"
+                        android:textSize="@dimen/gooddream_16dp" />
+
+                    <TextView
+                        android:id="@+id/tv_left_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="余额 0.00"
+                        android:textColor="@color/gooddream_gray_light"
+                        android:textSize="@dimen/gooddream_12dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/icon_left_time"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_left_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="离拿证还有90天"
+                    android:textColor="@color/gooddream_gray_light"
+                    android:textSize="@dimen/gooddream_14dp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_progress1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_personal_1_1" />
+
+                <ProgressBar
+                    android:id="@+id/progress1"
+                    style="@style/progressPersonal"
+                    android:layout_width="0dp"
+                    android:layout_height="1.5dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:progress="0" />
+
+                <ImageView
+                    android:id="@+id/iv_progress2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icon_personal_2_1" />
+
+                <ProgressBar
+                    android:id="@+id/progress2"
+                    style="@style/progressPersonal"
+                    android:layout_width="0dp"
+                    android:layout_height="1.5dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:progress="0" />
+
+                <ImageView
+                    android:id="@+id/iv_progress3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icon_personal_3_1" />
+
+                <ProgressBar
+                    android:id="@+id/progress3"
+                    style="@style/progressPersonal"
+                    android:layout_width="0dp"
+                    android:layout_height="1.5dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:progress="0" />
+
+                <ImageView
+                    android:id="@+id/iv_progress4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icon_personal_3_1" />
+
+                <ProgressBar
+                    android:id="@+id/progress4"
+                    style="@style/progressPersonal"
+                    android:layout_width="0dp"
+                    android:layout_height="1.5dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:progress="0" />
+
+                <ImageView
+                    android:id="@+id/iv_progress5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icon_personal_2_1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_progress_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/learning_progress_1"
+                    android:textColor="@color/gooddream_gray_light"
+                    android:textSize="@dimen/gooddream_14dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_progress_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/learning_progress_2"
+                    android:textColor="@color/gooddream_gray_light"
+                    android:textSize="@dimen/gooddream_14dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_progress_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/learning_progress_3"
+                    android:textColor="@color/gooddream_gray_light"
+                    android:textSize="@dimen/gooddream_14dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_progress_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/learning_progress_4"
+                    android:textColor="@color/gooddream_gray_light"
+                    android:textSize="@dimen/gooddream_14dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_progress_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/learning_progress_5"
+                    android:textColor="@color/gooddream_gray_light"
+                    android:textSize="@dimen/gooddream_14dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gooddream_gray_light" />
+
+            <TextView
+                android:id="@+id/tv_ensure"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/selector_tv_ensure"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/ensurn_enter"
+                android:textColor="@color/gooddream_blue"
+                android:textSize="@dimen/gooddream_14dp" />
+        </LinearLayout>
+    </com.my.customviews.OverScrollView>
+
+</LinearLayout>

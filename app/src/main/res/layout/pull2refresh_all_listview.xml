@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_all_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relative_center_nearby"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.my.pulltorefresh.PullToRefreshLayout
+            android:id="@+id/refresh_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/allview_refresh_head" />
+            <!-- 支持所有实现Pullable接口的View -->
+
+            <com.my.pulltorefresh.pullableview.PullableListView2
+                android:id="@+id/lv_center"
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/list_divide"
+                android:dividerHeight="1px"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                android:fadeScrollbars="true"
+                android:fastScrollEnabled="true"
+                android:overScrollMode="never" />
+
+            <include layout="@layout/allview_load_more" />
+        </com.my.pulltorefresh.PullToRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_refresh"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:src="@drawable/bg_failure" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_refresh"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/iv_refresh"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:gravity="center"-->
+                <!--android:text="暂无信息，戳我刷新"-->
+                <!--android:textColor="@drawable/color_refresh_selector" />-->
+            <RelativeLayout
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/relative_shapeloading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <com.my.progress.LoadingView
+                    android:id="@+id/loadView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:loadingText="暂无信息，戳我刷新" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

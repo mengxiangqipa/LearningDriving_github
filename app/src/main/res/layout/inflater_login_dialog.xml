@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/trans"
+    android:clickable="true"
+    android:onClick="onClick"
+    android:orientation="vertical"
+    android:paddingBottom="120dp"
+    android:paddingLeft="@dimen/gooddream_50dp"
+    android:paddingRight="@dimen/gooddream_50dp"
+    android:paddingTop="120dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_all_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/relative_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/login"
+                    android:textColor="@color/gooddream_blue"
+                    android:textSize="@dimen/gooddream_16dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/register"
+                    android:textColor="@color/gooddream_gray_dark"
+                    android:textSize="@dimen/gooddream_16dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/cusor_bak"
+            android:layout_width="match_parent"
+            android:layout_height="2dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray" />
+
+            <ImageView
+                android:id="@+id/cursor"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:scaleType="matrix"
+                android:src="@color/gooddream_blue" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_all_background">
+
+    </android.support.v4.view.ViewPager>
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/relative_center"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@color/white"></RelativeLayout>-->
+
+</LinearLayout>
